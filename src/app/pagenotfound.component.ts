@@ -1,0 +1,21 @@
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+@Component({
+  selector: 'nr-pagenotfound',
+  templateUrl: './pagenotfound.component.html',
+  styleUrls: ['./pagenotfound.component.scss']
+})
+export class PagenotfoundComponent implements OnInit {
+
+  pageTitle = 'Something is wrong!!!';
+  constructor(private router: Router) { }
+
+  ngOnInit() {
+  }
+
+  onBack() {
+    this.router.navigate(['/home']);
+  }
+
+}
